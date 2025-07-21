@@ -22,18 +22,6 @@ body{
     direction: rtl;
 }
 
-
-/* .entire-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 0;
-} */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -246,7 +234,6 @@ a.active:hover , .nav-text .gradient-text:hover{
     align-items: center;
     flex-direction: column;
     gap: 10px;
-
 }
 
 .start-now-container .heading h1{
@@ -504,7 +491,6 @@ a.active:hover , .nav-text .gradient-text:hover{
 /* media */
 @media (max-width:880px) {
     /* header */
-
     .header-container{
         gap: 20px;
     }
@@ -544,6 +530,10 @@ a.active:hover , .nav-text .gradient-text:hover{
     .header-logo .logo{
         margin-right: 15px;
     }
+
+    .header-phone{
+        display: none;
+    }
 }
 
 @media (max-width:630px){
@@ -575,17 +565,21 @@ a.active:hover , .nav-text .gradient-text:hover{
     }
 
     /* start now section */
+    .start-now-container .heading{
+        gap: 5px;
+    }
+
     .start-now-container .heading h1{
-    font-size: 35px;
-}
+    font-size: 30px;
+    }
 
-.start-now-container .heading p{
-    width: 300px;
-    font-size: 15px;
-}
+    .start-now-container .heading p{
+        width: 300px;
+        font-size: 15px;
+    }
 
-.form-container{
-    width: 300px;
-    padding: 20px;
-}
+    .form-container{
+        width: 300px;
+        padding: 20px;
+    }
 }
