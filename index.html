@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- phone pulgin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="./styles.css">
     <title>Egyptian Nile Travel</title>
@@ -29,7 +31,7 @@
             <nav class="nav-text nav-bar">
                 <ul class="list">
                     <li><a href="#home" class="active">سجل الآن</a></li>
-                    <li><a href="#about" class="gradient-text">ارشيف رحلاتنا</a></li>
+                    <li><a href="#start-now" class="gradient-text">ارشيف رحلاتنا</a></li>
                     <li><a href="#tours" class="gradient-text">البرامج</a></li>
                     <li><a href="#contact" class="gradient-text">تواصل معنا</a></li>
                 </ul>
@@ -48,14 +50,105 @@
             <div class="home-content">
                 <h1>نيــل مصر للسياحة</h1>
                 <h2>رحلتك للعمرة والحج تبدأ بثقة وتنتهي بذكريات لا تُنسى</h2>
-                <button><a href="#about">ابدأ رحلتك الآن</a></button>
+                <button><a href="#start-now">ابدأ رحلتك الآن</a></button>
             </div>
         </div>
+    </section>
 
+    <!-- start now section -->
+    <section class="start-now" id="start-now">
+        <div class="container start-now-container">
+            <!-- heading -->
+            <div class="heading">
+                <h1>ابدأ رحلتك معنا!</h1>
+                <p>املأ التفاصيل وسنتواصل معك لإكمال حجز برنامج العمرة أو الحج وتأكيد رحلتك.</p>
+            </div>
+
+            <!-- form -->
+            <form class="form-container">
+                <!-- form section one -->
+                <div class="form-section-1">
+                    <!-- name -->
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="الاسم" >
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group phone-container">
+                        <input id="phone" type="tel" name="phone" class="phone" placeholder="رقم الهاتف"/>
+                    </div>
+
+                    <!-- Second Phone -->
+                    <div class="form-group phone-container">
+                        <input id="phone2" type="tel" name="phone2" class="phone" placeholder="رقم الهاتف الاخر" />
+                    </div>
+
+                    <div class="form-group custom-select" dir="rtl">
+                        <select class="city" id="city">
+                            <option value="default" disabled selected>المدينة</option>
+                            <option value="القاهرة">القاهرة</option>
+                            <option value="الرياض">الرياض</option>
+                            <option value="جدة">جدة</option>
+                        </select>
+                        <div class="icon-container">
+                            <img src="./images/fi-rs-angle-small-down.svg" >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- divider -->
+                <p class="divider"></p>
+
+                <!-- form section 2 -->
+                <div class="form-section-2">
+
+                    <!-- trips type -->
+                    <div class="trip-type">
+                        <label class="radio first">
+                            <input type="radio" name="tripType" value="عمرة" checked>
+                            <span class="inner">
+                                <span class="custom-dot"></span>
+                                <img src="./images/kaaba.svg" alt="كعبة">
+                                <span>رحلات حج</span>
+                            </span>
+                        </label>
+
+                        <label class="radio second">
+                            <input type="radio" name="tripType" value="عمرة">
+                            <span class="inner">
+                                <img src="./images/kaaba (1).svg" alt="كعبة">
+                                <span>رحلات عمرة</span>
+                            </span>
+                            
+                        </label>
+                    </div>
+
+                    <!-- level selection -->
+                    <div class="form-group custom-select" dir="rtl">
+                        <select class="level" id="level">
+                            <option value="default" disabled selected>المستوى</option>
+                            <option value="اقتصادي">اقتصادي</option>
+                            <option value="متوسط">متوسط</option>
+                            <option value="فاخرة">فاخرة</option>
+                        </select>
+                        <div class="icon-container">
+                            <img src="./images/fi-rs-angle-small-down.svg" >
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="btn-container">
+                        <button>احجز الان</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
 
+
     <!-- js -->
-    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
