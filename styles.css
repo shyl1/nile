@@ -12,6 +12,7 @@
     --borders:rgba(102, 102, 102, 1);
     --bg-checked:rgba(221, 176, 95, 0.4);
     --text-checked:rgba(0, 0, 0, 0.7);
+    --btn-text:rgba(77, 77, 77, 1);
 
 
     --font-family:"Almarai", sans-serif;
@@ -20,6 +21,7 @@
 body{
     font-family: var(--font-family);
     direction: rtl;
+    background-color: rgba(35, 31, 32, 1);
 }
 
 * {
@@ -226,7 +228,8 @@ a.active:hover , .nav-text .gradient-text:hover{
     gap: 10px;
 }
 
-.start-now-container .heading{
+.start-now-container .heading ,
+.acrhcive-container .heading {
     width: 100%;
     text-align: center;
     display: flex;
@@ -236,7 +239,9 @@ a.active:hover , .nav-text .gradient-text:hover{
     gap: 10px;
 }
 
-.start-now-container .heading h1{
+.start-now-container .heading h1 ,
+.acrhcive-container .heading h1 ,
+.programs-container .heading h1{
     font-weight: 800;
     font-size: 48px;
     line-height: 57px;
@@ -247,7 +252,7 @@ a.active:hover , .nav-text .gradient-text:hover{
     color:transparent ;
 }
 
-.start-now-container .heading p{
+.start-now-container .heading p {
     width: 487px;
     height: 80px;
     font-weight: 400;
@@ -466,13 +471,12 @@ a.active:hover , .nav-text .gradient-text:hover{
 }
 
 /* button */
-
-.btn-container{
+.form-section-2 .btn-container{
     width: 100%;
     margin-top: 15px;
 }
 
-.btn-container button {
+.form-section-2 .btn-container button {
     width: 100%;
     outline: none;
     border: none;
@@ -486,9 +490,255 @@ a.active:hover , .nav-text .gradient-text:hover{
     cursor: pointer;
 }
 
+/* divder between start now and archive */
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background:var(--borders);
+}
+
+/* #archive */
+.archive{
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.acrhcive-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+    gap: 30px;
+}
+
+.acrhcive-container .media{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slider-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.video-player{
+    position: relative;
+}
+
+.video-player .play-icon{
+    position: absolute;
+    top: 43%;
+    left: 45%;
+}
+
+.play-icon img{
+    width: 90px;
+    height: 90px;
+}
+
+.slider-container .video-player .main-img{
+    width: 948px;
+    height: 532px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media .images{
+    width: 948px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 463px;
+    height: 260px;
+}
+
+
+.images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    display: block;
+
+}
+
+.image-text {
+    position: absolute;
+    bottom: 16px;
+    left: 150px;
+    font-weight: 800;
+    color: white;
+    font-size: 36px;
+}
+
+/* divider */
+.after-auto{
+    margin-top: 50px;
+}
+
+/* progams section */
+.programs{
+    position: relative;
+}
+
+.programs-container{
+    height: 50vh;
+    padding: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* mimicking the Elliptical Layer */
+.programs::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(0deg, #AA7839 -3.21%, #CB9A4E 48.23%, #F1C066 99.67%);
+    filter: blur(183.9px); 
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.programs-container .heading {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+.programs-container .heading p{
+    height: 36px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--primary-color);
+}
+
+.programs-container .btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 951px;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.btn-wrapper {
+    background: linear-gradient(78.91deg, #AA7839 -46.64%, #CB9A4E 15.8%, #F1C066 78.25%);
+    padding: 2px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.programs-container .btn-container button{
+    width: 464px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--font-family);
+    color: var(--btn-text);
+    padding: 7px 80px;
+}
+
+.programs-container .btn-container button .kaaba{
+    width: 49px;
+    height: 45px;
+}
+
+.programs-container .btn-container button .download{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* footer */
+
+
 
 
 /* media */
+
+@media (max-width: 1180px) {
+    /* archive section */
+    .slider-container .video-player .main-img{
+        width: 800px;
+    }
+
+    .media .images{
+        width: 800px;
+    }
+    
+    .image-wrapper{
+        width: 390px;
+    }
+
+    /* programs */
+    .programs-container .btn-container{
+        flex-direction: column;
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 1025px){
+    /* archive section */
+    .slider-container .video-player .main-img{
+        width: 600px;
+        height: 300px;
+    }
+
+    .media .images{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 600px;
+    }
+
+    .image-wrapper{
+        width:600px;
+        height: 200px;
+    }
+
+    /* archive */
+    .acrhcive-container .heading h1{
+        font-size: 40px;
+    }
+}
+
 @media (max-width:880px) {
     /* header */
     .header-container{
@@ -536,12 +786,41 @@ a.active:hover , .nav-text .gradient-text:hover{
     }
 }
 
+@media (max-width:835px) {
+    /* archive section */
+    .slider-container .video-player .main-img{
+        width: 350px;
+        height: 200px;
+    }
+    .image-wrapper{
+        width:350px;
+        height: 200px;
+    }
+
+    .media .images{
+        width: 350px;
+    }
+    
+    .slider-container{
+        gap: 10px;
+    }
+
+    .play-icon img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .programs-container .btn-container{
+        margin-top: 80px;
+    }
+}
+
 @media (max-width:630px){
     /* hero section */
     .home-container .home-content{
         gap: 5px;
     }
-    .home-container .home-content h1{
+    .home-container .home-content h1 {
         font-size: 45px;
     }
     .home-container .home-content h2{
@@ -549,6 +828,67 @@ a.active:hover , .nav-text .gradient-text:hover{
         width: 400px;
         height: 97px;
     }
+
+    /* archive */
+    .slider-container {
+    position: relative;
+    }
+
+    .slider-container .video-player .main-img{
+        width: 300px;
+        height: 200px;
+    }
+    .image-wrapper{
+        width:300px;
+        height: 200px;
+    }
+
+    .media .images{
+        width: 300px;
+    }
+    
+    .slider-container{
+        gap: 10px;
+    }
+
+    .play-icon img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .icon:first-child {
+        right: 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .icon:last-child {
+        left: 50px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .programs-container .btn-container{
+        width: 300px;
+    }
+
+    .programs-container .btn-container button{
+        width:300px ;
+        font-size: 18px;
+        padding: 8px 50px;
+    }
+
+    .programs-container .heading p{
+        font-size: 20px;
+    }
+
 }
 
 @media (max-width:530px){
@@ -569,7 +909,9 @@ a.active:hover , .nav-text .gradient-text:hover{
         gap: 5px;
     }
 
-    .start-now-container .heading h1{
+    .start-now-container .heading h1 ,
+    .acrhcive-container .heading h1 ,
+    .programs-container .heading h1{
     font-size: 30px;
     }
 
@@ -581,5 +923,10 @@ a.active:hover , .nav-text .gradient-text:hover{
     .form-container{
         width: 300px;
         padding: 20px;
+    }
+
+    /* archive */
+    .slider-container{
+        gap: 0px;
     }
 }
